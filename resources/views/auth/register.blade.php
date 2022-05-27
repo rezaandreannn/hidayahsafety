@@ -30,20 +30,18 @@
             <div class="mt-4">
                 <x-label for="password" :value="__('Password')" />
 
-                <x-input id="password" class=""
-                                type="password"
-                                name="password"
-                                required autocomplete="new-password" />
+                <x-input id="password" class="" type="password" name="password" required
+                    autocomplete="new-password" />
             </div>
 
             <!-- Confirm Password -->
             <div class="mt-4">
                 <x-label for="password_confirmation" :value="__('Confirm Password')" />
 
-                <x-input id="password_confirmation" class=""
-                                type="password"
-                                name="password_confirmation" required />
+                <x-input id="password_confirmation" class="" type="password" name="password_confirmation"
+                    required />
             </div>
+
 
             <div class="d-flex justify-content-end mt-4">
                 <a class="text-muted" href="{{ route('login') }}" style="margin-right: 15px; margin-top: 15px;">
