@@ -32,9 +32,9 @@ $classes = ($active ?? false)
     <div class="menu_section">
         <h3>Live On</h3>
         <ul class="nav side-menu">
-            <li><a><i class="fa fa-bug"></i> User <span class="fa fa-chevron-down"></span></a>
+            <li><a><i class="fa fa-bug"></i> Setting <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
-                    <li><a href="e_commerce.html">E-commerce</a></li>
+                    <li><a href="{{ route('users') }}">Users</a></li>
                     <li><a href="projects.html">Projects</a></li>
                     <li><a href="project_detail.html">Project Detail</a></li>
                     <li><a href="contacts.html">Contacts</a></li>

@@ -58,6 +58,7 @@
 
     <!-- Custom Theme Style -->
     <link href="{{ asset('assets/build/css/custom.min.css') }}" rel="stylesheet">
+    @livewireStyles
 </head>
 
 <body class="nav-md">
@@ -146,24 +147,18 @@
                 <div class="">
                     <div class="page-title">
                         <div class="title_left">
-                            <h3>Plain Page</h3>
+                            <h3 class="ml-2">{{ $title }}</h3>
                         </div>
 
                         <div class="title_right">
-                            <div class="col-md-5 col-sm-5   form-group pull-right top_search">
-                                <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Search for...">
-                                    <span class="input-group-btn">
-                                        <button class="btn btn-default" type="button">Go!</button>
-                                    </span>
-                                </div>
-                            </div>
+
                         </div>
                     </div>
 
                     <div class="clearfix"></div>
 
-                    -{{ $slot }}
+                    {{ $slot }}
+
                 </div>
             </div>
             <!-- /page content -->
@@ -185,6 +180,7 @@
 
     <!-- Custom Theme Scripts -->
     <script src="{{ asset('assets/build/js/custom.min.js') }}"></script>
+    @livewireScripts
 </body>
 
 </html>
