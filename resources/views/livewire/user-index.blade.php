@@ -38,8 +38,6 @@
                                         class="badge badge-primary border-0">Edit</button>
                                     <button wire:click="getUsr({{ $user->id }})"
                                         class="badge badge-danger border-0">hapus</button>
-                                    {{-- <a href="http://" class="badge badge-primary">Edit</a>
-                                    <a href="http://" class="badge badge-danger">delete</a> --}}
                                 </td>
                             </tr>
                         @endforeach
