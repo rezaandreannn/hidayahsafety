@@ -25,18 +25,19 @@ class Index extends Component
     {
         $this->form = true;
         $this->edit = false;
-
-        // $this->check = false;
     }
 
     public function getCategory($id)
     {
         $this->form = true;
         $this->edit = true;
+        $category = Category::find($id);
+        $this->emit('getCategory', $category);
     }
 
     public function back()
     {
+        // menghilangkan attribut form 
         $this->form = false;
     }
 

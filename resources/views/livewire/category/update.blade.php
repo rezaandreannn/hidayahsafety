@@ -1,4 +1,4 @@
-<form wire:submit.prevent="store">
+<form wire:submit.prevent="update">
     <div class="item form-group">
         <label class="col-form-label label-align" for="first-name">Nama <span class="required">*</span>
         </label>
