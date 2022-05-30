@@ -13,8 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/about', function () {
+    return view('main.about');
+});
+Route::get('/spesial', function () {
+    return view('main.spesial');
+});
+Route::get('/home', function () {
+    return view('main.collection');
 });
 
 Route::get('/dashboard', function () {

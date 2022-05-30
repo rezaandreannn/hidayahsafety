@@ -12,6 +12,10 @@ class UserIndex extends Component
 
     public $showFormUpdate = false;
 
+    protected $listeners = [
+        'userUpdate' => 'handleUserUpdate'
+    ];
+
     public function render()
     {
         return view('livewire.user-index', [
@@ -29,5 +33,12 @@ class UserIndex extends Component
     public function back()
     {
         $this->showFormUpdate = false;
+    }
+
+    public function handleUserUpdate($user)
+    {
+
+        session()->flash('message', 'Succesfully was ' . $user['name'] . ' updated');
+        $this->back();
     }
 }
