@@ -2,7 +2,7 @@
     {{-- <x-corousel /> --}}
     <div class="container py-5 mt-5">
         <div class="card my-5 ">
-            <h5 class="card-header bg-secondary">Contact Me</h5>
+            <h5 class="card-header bg-primary text-white text-uppercase text-center">Contact Me</h5>
             <div class="card-body">
                 <form action="" method="post">
                     @csrf

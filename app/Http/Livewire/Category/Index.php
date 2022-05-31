@@ -11,7 +11,8 @@ class Index extends Component
     public $edit = false;
 
     protected $listeners = [
-        'store' => 'handleStore'
+        'store' => 'handleStore',
+        'updated' => 'handleUpdate'
     ];
 
     public function render()
@@ -52,6 +53,12 @@ class Index extends Component
     public function handleStore()
     {
         session()->flash('message', 'Berhasil menambahkan data kategori baru');
+        $this->back();
+    }
+
+    public function handleUpdate()
+    {
+        session()->flash('message', 'Berhasil mengubah data kategori');
         $this->back();
     }
 }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire\Category;
 
+use App\Models\Category;
 use Livewire\Component;
 
 class Update extends Component
@@ -23,5 +24,27 @@ class Update extends Component
     {
         $this->name = $category['name'];
         $this->idCategory = $category['id'];
+    }
+
+    public function update()
+    {
+        $this->validate([
+            'name' => ['required'],
+
+        ]);
+        // $data = Category::find($this->idCategory);
+        if ($this->idCategory) {
+
+            $category = Category::find($this->idCategory);
+
+            if ($category) {
+                $category->update([
+                    'name'     => $this->name,
+                    // 'content'   => $this->content
+                ]);
+            }
+        }
+
+        $this->emit('updated', $category);
     }
 }

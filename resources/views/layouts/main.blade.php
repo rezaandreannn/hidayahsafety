@@ -24,7 +24,7 @@
         <div class="container">
             <a class="navbar-brand d-flex justify-content-between align-items-center order-lg-0" href="index.html">
                 <img src="{{ asset('assets/guest/images/shopping-bag-icon.png') }}" alt="site icon">
-                <span class="text-uppercase fw-lighter ms-2">{{ config('app.name') }}</span>
+                <span class="text-uppercase fw-lighter ms-2 judul">Hidayah safety indonesia</span>
             </a>
 
             <div class="order-lg-2 nav-btns">
