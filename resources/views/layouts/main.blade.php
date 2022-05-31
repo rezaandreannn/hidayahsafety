@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="{{ asset('assets/guest/bootstrap-5.0.2-dist/css/bootstrap.min.css') }}">
     <!-- custom css -->
     <link rel="stylesheet" href="{{ asset('assets/guest/css/main.css') }}">
+    @livewireStyles
 </head>
 
 <body>
@@ -62,7 +63,7 @@
                         <a class="nav-link text-uppercase text-dark" href="#popular">popular</a>
                     </li> --}}
                     <li class="nav-item px-2 py-2">
-                        <a class="nav-link text-uppercase text-dark" href="#blogs">Contact Me</a>
+                        <a class="nav-link text-uppercase text-dark" href="/contact-me">Contact Me</a>
                     </li>
                 </ul>
             </div>
@@ -77,111 +78,9 @@
     {{ $slot }}
     <!-- end of about us -->
 
-    <!-- popular -->
-    {{-- <section id="popular" class="py-5">
-        <div class="container">
-            <div class="title text-center pt-3 pb-5">
-                <h2 class="position-relative d-inline-block ms-4">Popular Of This Year</h2>
-            </div>
 
-            <div class="row">
-                <div class="col-md-6 col-lg-4 row g-3">
-                    <h3 class="fs-5">Top Rated</h3>
-                    <div class="d-flex align-items-start justify-content-start">
-                        <img src="images/top_rated_1.jpg" alt="" class="img-fluid pe-3 w-25">
-                        <div>
-                            <p class="mb-0">Blue Shirt</p>
-                            <span>$ 20.00</span>
-                        </div>
-                    </div>
-                    <div class="d-flex align-items-start justify-content-start">
-                        <img src="images/top_rated_2.jpg" alt="" class="img-fluid pe-3 w-25">
-                        <div>
-                            <p class="mb-0">Blue Shirt</p>
-                            <span>$ 20.00</span>
-                        </div>
-                    </div>
-                    <div class="d-flex align-items-start justify-content-start">
-                        <img src="images/top_rated_3.jpg" alt="" class="img-fluid pe-3 w-25">
-                        <div>
-                            <p class="mb-0">Blue Shirt</p>
-                            <span>$ 20.00</span>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="col-md-6 col-lg-4 row g-3">
-                    <h3 class="fs-5">Best Selling</h3>
-                    <div class="d-flex align-items-start justify-content-start">
-                        <img src="images/best_selling_1.jpg" alt="" class="img-fluid pe-3 w-25">
-                        <div>
-                            <p class="mb-0">Blue Shirt</p>
-                            <span>$ 20.00</span>
-                        </div>
-                    </div>
-                    <div class="d-flex align-items-start justify-content-start">
-                        <img src="images/best_selling_2.jpg" alt="" class="img-fluid pe-3 w-25">
-                        <div>
-                            <p class="mb-0">Blue Shirt</p>
-                            <span>$ 20.00</span>
-                        </div>
-                    </div>
-                    <div class="d-flex align-items-start justify-content-start">
-                        <img src="images/best_selling_3.jpg" alt="" class="img-fluid pe-3 w-25">
-                        <div>
-                            <p class="mb-0">Blue Shirt</p>
-                            <span>$ 20.00</span>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="col-md-6 col-lg-4 row g-3">
-                    <h3 class="fs-5">On Sale</h3>
-                    <div class="d-flex align-items-start justify-content-start">
-                        <img src="images/on_sale_1.jpg" alt="" class="img-fluid pe-3 w-25">
-                        <div>
-                            <p class="mb-0">Blue Shirt</p>
-                            <span>$ 20.00</span>
-                        </div>
-                    </div>
-                    <div class="d-flex align-items-start justify-content-start">
-                        <img src="images/on_sale_2.jpg" alt="" class="img-fluid pe-3 w-25">
-                        <div>
-                            <p class="mb-0">Blue Shirt</p>
-                            <span>$ 20.00</span>
-                        </div>
-                    </div>
-                    <div class="d-flex align-items-start justify-content-start">
-                        <img src="images/on_sale_3.jpg" alt="" class="img-fluid pe-3 w-25">
-                        <div>
-                            <p class="mb-0">Blue Shirt</p>
-                            <span>$ 20.00</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> --}}
-    <!-- end of popular -->
-
-    <!-- newsletter -->
-    {{-- <section id="newsletter" class="py-5">
-        <div class="container">
-            <div class="d-flex flex-column align-items-center justify-content-center">
-                <div class="title text-center pt-3 pb-5">
-                    <h2 class="position-relative d-inline-block ms-4">Newsletter Subscription</h2>
-                </div>
-
-                <p class="text-center text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus rem
-                    officia accusantium maiores quisquam dolorum?</p>
-                <div class="input-group mb-3 mt-3">
-                    <input type="text" class="form-control" placeholder="Enter Your Email ...">
-                    <button class="btn btn-primary" type="submit">Subscribe</button>
-                </div>
-            </div>
-        </div>
-    </section> --}}
-    <!-- end of newsletter -->
 
     <!-- footer -->
     <footer class="bg-dark py-5">
@@ -291,6 +190,7 @@
     <script src="{{ asset('assets/guest/bootstrap-5.0.2-dist/js/bootstrap.min.js') }}"></script>
     <!-- custom js -->
     <script src="{{ asset('assets/guest/js/script.js') }}"></script>
+    @livewireScripts
 </body>
 
 </html>

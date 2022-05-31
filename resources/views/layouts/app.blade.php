@@ -132,8 +132,12 @@
                                         <span>Settings</span>
                                     </a>
                                     <a class="dropdown-item" href="javascript:;">Help</a>
-                                    <a class="dropdown-item" href="login.html"><i
-                                            class="fa fa-sign-out pull-right"></i> Log Out</a>
+                                    <form action="{{ route('logout') }}" method="post">
+                                        @csrf
+                                        <button type="submit" class="dropdown-item" href=""><i
+                                                class="fa fa-sign-out pull-right"></i>
+                                            Log Out</button>
+                                    </form>
                                 </div>
                             </li>
                         </ul>

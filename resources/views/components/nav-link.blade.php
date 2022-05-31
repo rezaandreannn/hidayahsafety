@@ -23,7 +23,7 @@ $classes = ($active ?? false)
             <li><a><i class="fa fa-table"></i> Tables <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
                     <li><a href="{{ route('category.index') }}">Kategori</a></li>
-                    <li><a href="tables_dynamic.html">Table Dynamic</a></li>
+                    <li><a href="">Produk</a></li>
                 </ul>
             </li>
 
@@ -35,10 +35,7 @@ $classes = ($active ?? false)
             <li><a><i class="fa fa-bug"></i> Setting <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
                     <li><a href="{{ route('users') }}">Users</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="project_detail.html">Project Detail</a></li>
-                    <li><a href="contacts.html">Contacts</a></li>
-                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="#">Contacts</a></li>
                 </ul>
             </li>
         </ul>

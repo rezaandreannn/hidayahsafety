@@ -41,6 +41,13 @@ class Index extends Component
         $this->form = false;
     }
 
+    public function destroy($id)
+    {
+        $data = Category::find($id);
+        $data->delete();
+        session()->flash('message', 'Berhasil menghapus data kategori baru');
+    }
+
 
     public function handleStore()
     {

@@ -36,8 +36,8 @@
                                 <td>
                                     <button wire:click="getCategory({{ $category->id }})"
                                         class="badge badge-primary border-0">Edit</button>
-                                    <button wire:click="getUsr({{ $category->id }})"
-                                        class="badge badge-danger border-0">hapus</button>
+                                    <button class="badge badge-danger border-0" onclick="return confirm('Yakin ?')"
+                                        wire:click="destroy({{ $category->id }})">hapus</button>
                                 </td>
                             </tr>
                         @endforeach
