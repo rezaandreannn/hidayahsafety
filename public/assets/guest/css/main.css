@@ -3,7 +3,7 @@
 :root{
     --lg-font: 'Kaisei Tokumin', serif;
     --sm-font: 'Poppins', sans-serif;
-    --pink: #0c802e;
+    --pink: #3ac062;
 }
 body{
     font-family: var(--sm-font);
@@ -30,6 +30,11 @@ body{
 /* text color */
 .text-primary{
     color: var(--pink)!important;
+}
+
+/* text rating */
+.text-rating{
+    color: #D2AC47;
 }
 
 /* navbar */
@@ -193,9 +198,3 @@ footer a:hover{
    
 }
 
-@media(min-width: 576px) {
-     .judul{
-        /* font-weight: 100; */
-        /* font-size: small; */
-    }
-}

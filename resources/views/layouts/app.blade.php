@@ -56,8 +56,21 @@
     <!-- NProgress -->
     <link href="{{ asset('assets/vendors/nprogress/nprogress.css') }}" rel="stylesheet">
 
+    <!-- Dropzone.js -->
+    <link href="{{ asset('assets/vendors/dropzone/dist/min/dropzone.min.css') }}" rel="stylesheet">
+
     <!-- Custom Theme Style -->
     <link href="{{ asset('assets/build/css/custom.min.css') }}" rel="stylesheet">
+    {{-- data tables --}}
+    <link href="{{ asset('assets/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css') }}"
+        rel="stylesheet">
+    <link href="{{ asset('assets/vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css') }}"
+        rel="stylesheet">
+    <link href="{{ asset('assets/vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css') }}"
+        rel="stylesheet">
+    <link href="{{ asset('assets/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css') }}"
+        rel="stylesheet">
     @livewireStyles
 </head>
 
@@ -173,6 +186,27 @@
         </div>
     </div>
 
+    {{-- scrip menampilkan image form --}}
+    <script>
+        function Live() {
+            const image = document.querySelector('#image');
+            const imgPreview = document.querySelector('.img-preview');
+
+            console.log(imgPreview)
+
+            imgPreview.style.display = 'block';
+
+            const oFReader = new FileReader();
+            oFReader.readAsDataURL(image.files[0]);
+
+
+            oFReader.onload = function(oFREvent) {
+                imgPreview.src = oFREvent.target.result;
+
+            }
+        }
+    </script>
+
     <!-- jQuery -->
     <script src="{{ asset('assets/vendors/jquery/dist/jquery.min.js') }}"></script>
     <!-- Bootstrap -->
@@ -184,6 +218,8 @@
 
     <!-- Custom Theme Scripts -->
     <script src="{{ asset('assets/build/js/custom.min.js') }}"></script>
+    {{-- dinamis scrip --}}
+    @stack('scripts')
     @livewireScripts
 </body>
 

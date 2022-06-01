@@ -1,4 +1,21 @@
-Bagaimana dengan deploynya ?
-Berapa lama waktu yang diperlukan ?
-fitur page user ?
-            Admin ?
+jumat /03/2022
+redesign ui 
+-> collection
+    -> call me
+    -> deskripsi
+-> about us
+-> spesial
+
+
+kamis/02/2022
+Admin
+-> produk 
+ -> edit produk = false
+ -> show = deskripsi 
+ -> redesign show produk
+
+ migration 
+ add deskripsi to produk
+
+
+
