@@ -3712,8 +3712,9 @@ ul.project_files li a i {
 /* *********  /pricing  **************************** */
 /* *********  media gallery  **************************** */
 .thumbnail .image {
-  height: 120px;
-  overflow: hidden; }
+  height: 300px;
+  overflow: hidden; 
+}
 
 .caption {
   padding: 9px 5px;

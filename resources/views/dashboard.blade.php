@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-app-layout title="Dashboard">
     {{-- menampilkan data user all --}}
     <a href="https://tokopedia.link/T6YUJBGzqqb" target="blink">Wearpack Nomex IIIA 3A Coverall Fire Retardant Original
         Safety Nomex</a>

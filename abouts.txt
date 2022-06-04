@@ -7,15 +7,15 @@ redesign ui
 -> spesial
 
 
-kamis/02/2022
-Admin
+kamis/02/ 👍
+Admin{
 -> produk 
- -> edit produk = false
+ -> edit produk = 
  -> show = deskripsi 
  -> redesign show produk
 
  migration 
  add deskripsi to produk
-
-
+ messages = untuk menerima pesan dari users
+}
 

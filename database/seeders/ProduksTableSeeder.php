@@ -18,7 +18,8 @@ class ProduksTableSeeder extends Seeder
             'produk' => 'sepatu',
             'category_id' => 1,
             'harga' => null,
-            'image' => 'sepatu.jpg',
+            'image' => '',
+            'deskripsi' => '',
             'spesial' => false
         ]);
     }

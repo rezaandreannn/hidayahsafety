@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
-use App\Models\Category;
 use App\Models\Produk;
+use App\Models\Category;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\Http\Requests\ProdukRequest;
 use Illuminate\Support\Facades\Storage;
 
 class ProduksController extends Controller
@@ -17,9 +18,9 @@ class ProduksController extends Controller
      */
     public function index()
     {
-        //menampilkan data produk
+        //menampilkan data produk with n+1
         return view('admin.index', [
-            'produks' => Produk::latest()->get()
+            'produks' => Produk::with('category')->latest()->get()
         ]);
     }
 
@@ -41,24 +42,21 @@ class ProduksController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ProdukRequest $request)
     {
-        // return $request->file('image')->store('produk-images');
-        $validated = $request->validate([
-            'produk' => 'required',
-            'category_id' => 'required',
-            'harga' => 'd',
-            'image' => 'image|file',
-            'spesial' => 'required'
-        ]);
+        // vaildasi inputan produk dari Produk request
+        $validated = $request->validated();
 
+        // cek apakah ada gambar, jika ada simpan ke storage 
         if ($request->file('image')) {
-            # code...
             $validated['image'] = $request->file('image')->store('produk-images');
         }
 
+        // simpan ke dalam database
         Produk::create($validated);
-        return redirect('produk')->with('success', 'berhasil menambah data produk !');
+
+        // jika sukses, kembali ke page dan return alert
+        return redirect('produk')->with('success', 'berhasil menambah data produk!');
     }
 
     /**
@@ -69,7 +67,10 @@ class ProduksController extends Controller
      */
     public function show($id)
     {
+        // cek id yang dikirem dari params
         $data = Produk::find($id);
+
+        // mengirimkan data detail berdasarkan id ke view
         return view('admin.show', [
             'produk' => $data
         ]);
@@ -83,7 +84,14 @@ class ProduksController extends Controller
      */
     public function edit($id)
     {
-        //
+        // cek id yang dikirem dari params
+        $data = Produk::find($id);
+
+        // menampilkan data berdasarkan id ke form edit
+        return view('admin.edit', [
+            'produk' => $data,
+            'categories' => Category::all()
+        ]);
     }
 
     /**
@@ -93,9 +101,26 @@ class ProduksController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(ProdukRequest $request, $id)
     {
-        //
+        //validasi inputan dari produk request
+        $validated = $request->validated();
+
+        // cek apakah ada gambar baru, jika ada simpan ke storage 
+        if ($request->file('image')) {
+            // hapus gambar lama
+            if ($request->oldImage) {
+                Storage::delete($request->oldImage);
+            }
+            $validated['image'] = $request->file('image')->store('produk-images');
+        }
+
+        // simpan ke db berdasarkan param
+        Produk::where('id', $id)
+            ->update($validated);
+
+        // kembali ke page index with alert
+        return redirect('produk')->with('success', 'berhasil mengubah data produk!');
     }
 
     /**
@@ -106,16 +131,15 @@ class ProduksController extends Controller
      */
     public function destroy(Produk $produk)
     {
-
-        // $data = Produk::find($produk->id);
-        // $data->delete();
-
+        // cek jika ada gambar, hapus dulu gambar yg ada di storage 
         if ($produk->image) {
             Storage::delete($produk->image);
         }
 
+        // proses hapus
         Produk::destroy($produk->id);
 
-        return redirect('produk')->with('success', 'berhasil menghapus data produk !');
+        // kembali ke page produk with alert
+        return redirect('produk')->with('success', 'berhasil menghapus data produk!');
     }
 }

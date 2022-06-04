@@ -1,4 +1,4 @@
-a<x-main-layout>
+<x-main-layout>
     <x-corousel />
 
     <!-- collection -->
@@ -8,8 +8,20 @@ a<x-main-layout>
                 <h2 class="position-relative d-inline-block">New Collection</h2>
             </div>
 
+
+
             <div class="row g-0">
-                <div class="d-flex flex-wrap justify-content-center mt-5 filter-button-group">
+                <div class="d-flex flex-wrap my-5 ">
+
+                    <ul class="nav">
+                        @foreach ($categories as $category)
+                            <li class="nav-item ">
+                                <a class="nav-link text-decoration-none text-muted"
+                                    href="{{ route('category.show', $category->id) }}">{{ $category->name }}</a>
+                            </li>
+                        @endforeach
+                    </ul>
+
                     {{-- <div class="row">
                         <div class="col-md-6">
                             <form action="" method="GET">
@@ -81,53 +93,9 @@ a<x-main-layout>
                         </div>
                     </div>
                 @endforeach
-
-
-
-
-
-
-                {{-- <div class="col-md-6 col-lg-4 col-xl-3 p-2 new">
-                    <div class="collection-img position-relative">
-                        <img src="images/c_tunic-shirt_girl.png" class="w-100">
-                        <span
-                            class="position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>
-                    </div>
-                    <div class="text-center">
-                        <div class="rating mt-3">
-                            <span class="text-primary"><i class="fas fa-star"></i></span>
-                            <span class="text-primary"><i class="fas fa-star"></i></span>
-                            <span class="text-primary"><i class="fas fa-star"></i></span>
-                            <span class="text-primary"><i class="fas fa-star"></i></span>
-                            <span class="text-primary"><i class="fas fa-star"></i></span>
-                        </div>
-                        <p class="text-capitalize my-1">gray shirt</p>
-                        <span class="fw-bold">$ 45.50</span>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-4 col-xl-3 p-2 best">
-                    <div class="collection-img position-relative">
-                        <img src="images/c_undershirt.png" class="w-100">
-                        <span
-                            class="position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>
-                    </div>
-                    <div class="text-center">
-                        <div class="rating mt-3">
-                            <span class="text-primary"><i class="fas fa-star"></i></span>
-                            <span class="text-primary"><i class="fas fa-star"></i></span>
-                            <span class="text-primary"><i class="fas fa-star"></i></span>
-                            <span class="text-primary"><i class="fas fa-star"></i></span>
-                            <span class="text-primary"><i class="fas fa-star"></i></span>
-                        </div>
-                        <p class="text-capitalize my-1">gray shirt</p>
-                        <span class="fw-bold">$ 45.50</span>
-                    </div>
-                </div> --}}
-
             </div>
         </div>
-        </div>
+        {{-- </div> --}}
     </section>
     <!-- end of collection -->
 </x-main-layout>

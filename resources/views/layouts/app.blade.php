@@ -164,7 +164,7 @@
                 <div class="">
                     <div class="page-title">
                         <div class="title_left">
-                            <h3 class="ml-2">{{ $title ?? '' }}</h3>
+                            {{-- <h3 class="ml-2">{{ $title ?? '' }}</h3> --}}
                         </div>
 
                         <div class="title_right">

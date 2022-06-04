@@ -23,6 +23,7 @@ Route::get('/', function () {
 
 Route::get('/home', CollectionsContoller::class)->name('collection');
 Route::get('/spesial', SpesialsContoller::class)->name('spesial');
+Route::get('/category/{$id}', SpesialsContoller::class)->name('category.show');
 
 
 Route::get('/about', function () {

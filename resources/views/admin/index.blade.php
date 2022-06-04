@@ -1,29 +1,20 @@
-<x-app-layout>
+<x-app-layout title="Produk">
     <div class="row">
         <div class="col-md-12 col-sm-12 ">
+            {{-- pesan flashdata --}}
             @if (session('success'))
                 <div class="alert alert-primary" role="alert">
                     {{ session('success') }}
                 </div>
             @endif
+            {{-- end pesan flashdata --}}
             <div class="x_panel">
                 <div class="x_title">
-                    <h2>{{ $title ?? 'produk' }}</h2>
-                    {{-- <ul class="nav navbar-right panel_toolbox">
-                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="#">Settings 1</a>
-                                <a class="dropdown-item" href="#">Settings 2</a>
-                            </div>
-                        </li>
-                        <li><a class="close-link"><i class="fa fa-close"></i></a>
-                        </li> --}}
+                    {{-- <h2>{{ $title ?? 'produk' }}</h2> --}}
                     </ul>
+                    {{-- tombol tambah produk --}}
                     <a href="{{ route('produk.create') }} " class="btn btn-primary" style="float: right">Tambah</a>
+                    {{-- end tombol tambah produk --}}
                     <div class="clearfix"></div>
                 </div>
                 <div class="x_content">
@@ -36,49 +27,52 @@
                                             <th style="max-width: 5px">No</th>
                                             <th>Produk</th>
                                             <th>kategori</th>
-                                            <th>Image</th>
-                                            <th>Spesial</th>
+                                            <th>Deskripsi</th>
+                                            <th style="max-width: 20px">Spesial</th>
                                             <th>Opsi</th>
-                                            {{-- <th>Salary</th> --}}
                                         </tr>
                                     </thead>
-
-
                                     <tbody>
                                         @foreach ($produks as $produk)
                                             <tr>
-                                                <td>1</td>
+                                                <td>{{ $loop->iteration }}</td>
                                                 <td>{{ $produk->produk }}</td>
                                                 <td>{{ $produk->category->name }}</td>
-
-                                                <td>detail
-                                                    {{-- <img src="{{ asset('storage/' . $produk->image) }}" alt=""
-                                                        style="width: 300px"> --}}
-                                                </td>
-
-                                                <td>
+                                                <td>{{ $produk->deskripsi }}</td>
+                                                <td class="text-center">
                                                     @if ($produk->spesial)
-                                                        <span>yes</span>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input position-static"
+                                                                type="checkbox" checked disabled>
+                                                        </div>
                                                     @else
-                                                        <span>No</span>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input position-static"
+                                                                type="checkbox" disabled>
+                                                        </div>
                                                     @endif
                                                 </td>
-                                                <td class="">
+                                                <td>
+                                                    {{-- Detail produk --}}
                                                     <a href="{{ route('produk.show', $produk->id) }}"><i
                                                             class="fa fa-info fa-2x text-primary"></i></a>
-                                                    <a href="http://"><i
+                                                    {{-- end detail produk --}}
+                                                    {{-- edit produk --}}
+                                                    <a href="{{ route('produk.edit', $produk->id) }}"><i
                                                             class="fa fa-pencil fa-2x text-warning ml-2"></i></a>
+                                                    {{-- end edit produk --}}
+                                                    {{-- delete produk --}}
                                                     <form action="{{ route('produk.destroy', [$produk->id]) }}"
-                                                        method="post" class="d-inline">
+                                                        method="post" class="d-inline"
+                                                        onsubmit="return confirm('yakin menghapus ?')">
                                                         @method('DELETE')
                                                         @csrf
                                                         <button class="badge badge-danger border-0 d-inline"
                                                             type="submit"><i
                                                                 class="fa fa-trash fa-2x text-white"></i></button>
-
                                                     </form>
+                                                    {{-- end delete produk --}}
                                                 </td>
-                                                {{-- <td>$320,800</td> --}}
                                             </tr>
                                         @endforeach
                                     </tbody>
@@ -91,6 +85,7 @@
         </div>
     </div>
 
+    {{-- scripts data table --}}
     @push('scripts')
         <script src="{{ asset('assets/vendors/datatables.net/js/jquery.dataTables.min.js') }}"></script>
         <script src="{{ asset('assets/vendors/datatables.net-bs/js/dataTables.bootstrap.min.js') }}"></script>
@@ -108,4 +103,5 @@
         <script src="{{ asset('assets/vendors/pdfmake/build/pdfmake.min.js') }}"></script>
         <script src="{{ asset('assets/vendors/pdfmake/build/vfs_fonts.js') }}"></script>
     @endpush
+    {{-- end scripts data table --}}
 </x-app-layout>
