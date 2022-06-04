@@ -1,10 +1,14 @@
 <?php
 
+use App\Http\Controllers\Admin\MessagesController;
 use App\Http\Livewire\Category\Index;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Main\AboutController;
+use App\Http\Controllers\Main\ContactController;
 use App\Http\Controllers\Main\SpesialsContoller;
 use App\Http\Controllers\Admin\ProduksController;
 use App\Http\Controllers\Main\CollectionsContoller;
+use App\Http\Controllers\Main\ContactStoreController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,32 +21,25 @@ use App\Http\Controllers\Main\CollectionsContoller;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::get('/home', CollectionsContoller::class)->name('collection');
+// route guest
+Route::get('/', CollectionsContoller::class)->name('collection');
 Route::get('/spesial', SpesialsContoller::class)->name('spesial');
 Route::get('/category/{$id}', SpesialsContoller::class)->name('category.show');
+Route::get('/about', AboutController::class)->name('about');
+Route::get('/contact-me', ContactController::class)->name('contact');
+Route::post('/contact-me', ContactStoreController::class)->name('contact.store');
 
-
-Route::get('/about', function () {
-    return view('main.about');
-});
-
-// Route::get('/spesial', function () {
-//     return view('main.spesial');
-// });
-Route::get('/contact-me', function () {
-    return view('main.contact');
-});
-
-
+// route admin
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
     Route::get('/category', Index::class)->name('category.index');
+    Route::get('/message', [MessagesController::class, 'index'])->name('message.index');
     Route::resource('produk', ProduksController::class);
 });
 

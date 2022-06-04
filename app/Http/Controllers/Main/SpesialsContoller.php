@@ -17,8 +17,12 @@ class SpesialsContoller extends Controller
      */
     public function __invoke(Request $request)
     {
-        // $data = Produk::where('spesial', false);
-        $data = DB::table('produks')->where('spesial', true)->get();
+        // ambil data produk yang spesial
+        // $data = DB::table('produks')->where('spesial', true)->get();
+
+        $data = Produk::where('spesial', true)->get();
+
+        // dd($data);
 
         return view('main.spesial', [
             'produksSpesials' => $data

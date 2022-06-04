@@ -61,8 +61,11 @@ body{
 }
 
 /* header */
-#header{
-    background: url(../images/banner.jpg) top/cover no-repeat;
+#header img{
+    /* background: url(../images/oke2.jpg)  top/cover no-repeat; */
+    max-width: 100%;
+    height: auto;
+    /* background: url(../images/rev.jpg); */
 }
 .carousel-inner h1{
     font-size: 60px;

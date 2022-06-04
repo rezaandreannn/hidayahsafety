@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ config('app.name') }} | {{ $title }}</title>
+    {{-- favicon --}}
+    <link rel="icon" type="image/x-icon" href="{{ asset('assets/guest/images/logo.ico') }}">
     <!-- fontawesome cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
@@ -23,7 +25,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-white py-4 fixed-top">
         <div class="container">
             <a class="navbar-brand d-flex justify-content-between align-items-center order-lg-0" href="index.html">
-                <img src="{{ asset('assets/guest/images/shopping-bag-icon.png') }}" alt="site icon">
+                <img src="{{ asset('assets/guest/images/title-logo.png') }}" alt="site icon">
                 <span class="text-uppercase fw-lighter ms-2 judul">Hidayah safety indonesia</span>
             </a>
 
@@ -48,22 +50,22 @@
             <div class="collapse navbar-collapse order-lg-1" id="navMenu">
                 <ul class="navbar-nav mx-auto text-center">
                     <li class="nav-item px-2 py-2">
-                        <a class="nav-link text-uppercase text-dark" href="/home">home</a>
+                        <a class="nav-link text-uppercase text-dark" href="{{ route('collection') }}">home</a>
                     </li>
                     {{-- <li class="nav-item px-2 py-2">
                         <a class="nav-link text-uppercase text-dark" href="/collection">collection</a>
                     </li> --}}
                     <li class="nav-item px-2 py-2">
-                        <a class="nav-link text-uppercase text-dark" href="/spesial">specials</a>
+                        <a class="nav-link text-uppercase text-dark" href="{{ route('spesial') }}">specials</a>
                     </li>
                     <li class="nav-item px-2 py-2">
-                        <a class="nav-link text-uppercase text-dark" href="/about">about us</a>
+                        <a class="nav-link text-uppercase text-dark" href="{{ route('about') }}">about us</a>
                     </li>
                     {{-- <li class="nav-item px-2 py-2 border-0">
                         <a class="nav-link text-uppercase text-dark" href="#popular">popular</a>
                     </li> --}}
                     <li class="nav-item px-2 py-2">
-                        <a class="nav-link text-uppercase text-dark" href="/contact-me">Contact Me</a>
+                        <a class="nav-link text-uppercase text-dark" href="{{ route('contact') }}">Contact Me</a>
                     </li>
                 </ul>
             </div>
@@ -89,31 +91,33 @@
                 <div class="col-md-6 col-lg-3">
                     <a class="text-uppercase text-decoration-none brand text-white"
                         href="index.html">{{ config('app.name') }}</a>
-                    <p class="text-white text-muted mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Nostrum mollitia quisquam veniam odit cupiditate, ullam aut voluptas velit dolor ipsam?</p>
+                    <p class="text-white text-muted mt-3">Kami Juga termasuk Supplier dan Distributor Perlengkapan
+                        Safety dan Peralatan Keselamatan Kerja
+                        di Jakarta. Berbagai macam alat keselamatan kerja kami sediakan untuk memenuhi kebutuhan anda.
+                    </p>
                 </div>
 
                 <div class="col-md-6 col-lg-3">
                     <h5 class="fw-light">Links</h5>
                     <ul class="list-unstyled">
                         <li class="my-3">
-                            <a href="#" class="text-white text-decoration-none text-muted">
+                            <a href="{{ route('collection') }}" class="text-white text-decoration-none text-muted">
                                 <i class="fas fa-chevron-right me-1"></i> Home
                             </a>
                         </li>
                         <li class="my-3">
-                            <a href="#" class="text-white text-decoration-none text-muted">
-                                <i class="fas fa-chevron-right me-1"></i> Collection
+                            <a href="{{ route('spesial') }}" class="text-white text-decoration-none text-muted">
+                                <i class="fas fa-chevron-right me-1"></i> Spesial
                             </a>
                         </li>
                         <li class="my-3">
-                            <a href="#" class="text-white text-decoration-none text-muted">
-                                <i class="fas fa-chevron-right me-1"></i> Blogs
-                            </a>
-                        </li>
-                        <li class="my-3">
-                            <a href="#" class="text-white text-decoration-none text-muted">
+                            <a href="{{ route('about') }}" class="text-white text-decoration-none text-muted">
                                 <i class="fas fa-chevron-right me-1"></i> About Us
+                            </a>
+                        </li>
+                        <li class="my-3">
+                            <a href="{{ route('contact') }}" class="text-white text-decoration-none text-muted">
+                                <i class="fas fa-chevron-right me-1"></i> Contact Me
                             </a>
                         </li>
 
@@ -127,7 +131,8 @@
                             <i class="fas fa-map-marked-alt"></i>
                         </span>
                         <span class="fw-light">
-                            Albert Street, New York, AS 756, United States of America
+                            LTC Glodok, Lantai GF1, Blok C8, No. 6, Jl. Hayam Wuruk No.127, RT.1/RW.6, Mangga Besar,
+                            Kec. Taman Sari, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11180
                         </span>
                     </div>
                     <div class="d-flex justify-content-start align-items-start my-2 text-muted">
@@ -135,7 +140,7 @@
                             <i class="fas fa-envelope"></i>
                         </span>
                         <span class="fw-light">
-                            attire.support@gmail.com
+                            hidayahsafetyindonesia16@gmail.com
                         </span>
                     </div>
                     <div class="d-flex justify-content-start align-items-start my-2 text-muted">
@@ -143,7 +148,7 @@
                             <i class="fas fa-phone-alt"></i>
                         </span>
                         <span class="fw-light">
-                            +9786 6776 236
+                            +628 9649 9335 42
                         </span>
                     </div>
                 </div>

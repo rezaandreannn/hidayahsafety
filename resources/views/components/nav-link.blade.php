@@ -24,6 +24,7 @@ $classes = ($active ?? false)
                 <ul class="nav child_menu">
                     <li><a href="{{ route('category.index') }}">Kategori</a></li>
                     <li><a href="{{ route('produk.index') }}">Produk</a></li>
+                    <li><a href="{{ route('message.index') }}">Pesan</a></li>
                 </ul>
             </li>
 
