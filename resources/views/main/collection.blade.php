@@ -5,7 +5,7 @@
     <section id="collection" class="py-5">
         <div class="container">
             <div class="title text-center">
-                <h2 class="position-relative d-inline-block">Collection</h2>
+                <h2 class="position-relative d-inline-block">Produk Kami</h2>
             </div>
 
 

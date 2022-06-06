@@ -1,11 +1,11 @@
 <x-main-layout title="About Us">
-    <x-corousel />
+    {{-- <x-corousel /> --}}
     <section id="about" class="py-5">
         <div class="container">
             <div class="row gy-lg-5 align-items-center">
                 <div class="col-lg-6 order-lg-1 text-center text-lg-start">
                     <div class="title pt-3 pb-5">
-                        <h2 class="position-relative d-inline-block ms-4">About Us</h2>
+                        <h2 class="position-relative d-inline-block ms-4">Tentang Kami</h2>
                     </div>
                     <p class="lead text-muted">Toko Alat Safety Di Glodok Jakarta .
                     </p>
@@ -18,7 +18,7 @@
                     </p>
                 </div>
                 <div class="col-lg-6 order-lg-0">
-                    <img src="{{ asset('assets/guest/images/about_us.jpg') }}" alt="" class="img-fluid">
+                    <img src="{{ asset('assets/guest/images/about.jpeg') }}" alt="" class="img-fluid">
                 </div>
             </div>
         </div>

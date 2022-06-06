@@ -8,7 +8,7 @@
             </div>
         @endif
         <div class="card my-5 ">
-            <h5 class="card-header bg-primary text-white text-uppercase text-center">Contact Me</h5>
+            <h5 class="card-header bg-primary text-white text-uppercase text-center">Kontak Kami</h5>
             <div class="card-body">
                 <form action="{{ route('contact.store') }}" method="POST">
                     @csrf
@@ -36,7 +36,7 @@
                         </div>
                     </div>
                     <button type="submit" class="btn bg-primary text-white"
-                        style="float: right !important">Submit</button>
+                        style="float: right !important">Kirim</button>
                 </form>
             </div>
         </div>

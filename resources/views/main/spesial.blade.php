@@ -2,7 +2,7 @@
     <section id="special" class="py-5">
         <div class="container">
             <div class="title text-center py-5">
-                <h2 class="position-relative d-inline-block mt-5">Special Produks</h2>
+                <h2 class="position-relative d-inline-block mt-5">Produk Spesial</h2>
             </div>
 
             <div class="special-list row g-0">
@@ -23,14 +23,20 @@
                                 <a href="#" class="badge bg-primary border-0 text-decoration-none"
                                     data-bs-toggle="modal" data-bs-target="#exampleModal{{ $items->id }}">detail</a>
                             </p>
-                            <span class="d-block">Cat : {{ $items->category->name }}</span>
+                            {{-- <span class="d-block">Cat : {{ $items->category->name }}</span> --}}
+                            <p>
+                                <a href="http://" class="badge bg-primary text-decoration-none fst-italic fw-light">call
+                                    1</a>
+                                <a href="http://" class="badge bg-primary text-decoration-none fst-italic fw-light">call
+                                    2</a>
+                            </p>
                         </div>
                     </div>
                 @empty
                     <div class="card">
                         <div class="card-body bg-primary">
                             <blockquote class="blockquote mb-0">
-                                <p class="text-center">special products will be available soon. 😓</p>
+                                <p class="text-center">Produk spesial kosong. 😓</p>
                             </blockquote>
                         </div>
                     </div>
@@ -64,6 +70,11 @@
                                 </div>
                             </div>
                             <div class="col-sm-6">
+                                <p>
+                                    <span class="fw-bold">Category</span> <br><span
+                                        class="text-muted">{{ $items->category->name }}</span>
+                                </p>
+                                <hr>
                                 <p><span class="fw-bold">Deskripsi</span> <br><span
                                         class="text-muted">{{ $items->deskripsi }}</span></p>
                                 {{-- <p class="text-muted"></p> --}}

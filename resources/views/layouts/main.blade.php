@@ -50,22 +50,19 @@
             <div class="collapse navbar-collapse order-lg-1" id="navMenu">
                 <ul class="navbar-nav mx-auto text-center">
                     <li class="nav-item px-2 py-2">
-                        <a class="nav-link text-uppercase text-dark" href="{{ route('collection') }}">home</a>
+                        <a class="nav-link text-uppercase text-dark" href="{{ route('collection') }}">beranda</a>
                     </li>
                     {{-- <li class="nav-item px-2 py-2">
                         <a class="nav-link text-uppercase text-dark" href="/collection">collection</a>
                     </li> --}}
                     <li class="nav-item px-2 py-2">
-                        <a class="nav-link text-uppercase text-dark" href="{{ route('spesial') }}">specials</a>
+                        <a class="nav-link text-uppercase text-dark" href="{{ route('spesial') }}">spesial</a>
                     </li>
                     <li class="nav-item px-2 py-2">
-                        <a class="nav-link text-uppercase text-dark" href="{{ route('about') }}">about us</a>
+                        <a class="nav-link text-uppercase text-dark" href="{{ route('about') }}">tentang kami</a>
                     </li>
-                    {{-- <li class="nav-item px-2 py-2 border-0">
-                        <a class="nav-link text-uppercase text-dark" href="#popular">popular</a>
-                    </li> --}}
                     <li class="nav-item px-2 py-2">
-                        <a class="nav-link text-uppercase text-dark" href="{{ route('contact') }}">Contact Me</a>
+                        <a class="nav-link text-uppercase text-dark" href="{{ route('contact') }}">kontak</a>
                     </li>
                 </ul>
             </div>
@@ -89,8 +86,8 @@
         <div class="container">
             <div class="row text-white g-4">
                 <div class="col-md-6 col-lg-3">
-                    <a class="text-uppercase text-decoration-none brand text-white"
-                        href="index.html">{{ config('app.name') }}</a>
+                    <a class="text-uppercase text-decoration-none brand text-white" href="index.html">Hidayah Safety
+                        Indonesia</a>
                     <p class="text-white text-muted mt-3">Kami Juga termasuk Supplier dan Distributor Perlengkapan
                         Safety dan Peralatan Keselamatan Kerja
                         di Jakarta. Berbagai macam alat keselamatan kerja kami sediakan untuk memenuhi kebutuhan anda.
@@ -98,7 +95,7 @@
                 </div>
 
                 <div class="col-md-6 col-lg-3">
-                    <h5 class="fw-light">Links</h5>
+                    <h5 class="fw-light">Tautan</h5>
                     <ul class="list-unstyled">
                         <li class="my-3">
                             <a href="{{ route('collection') }}" class="text-white text-decoration-none text-muted">
@@ -112,12 +109,12 @@
                         </li>
                         <li class="my-3">
                             <a href="{{ route('about') }}" class="text-white text-decoration-none text-muted">
-                                <i class="fas fa-chevron-right me-1"></i> About Us
+                                <i class="fas fa-chevron-right me-1"></i> Tentang kami
                             </a>
                         </li>
                         <li class="my-3">
                             <a href="{{ route('contact') }}" class="text-white text-decoration-none text-muted">
-                                <i class="fas fa-chevron-right me-1"></i> Contact Me
+                                <i class="fas fa-chevron-right me-1"></i> Kontak kami
                             </a>
                         </li>
 
@@ -125,7 +122,7 @@
                 </div>
 
                 <div class="col-md-6 col-lg-3">
-                    <h5 class="fw-light mb-3">Contact Us</h5>
+                    <h5 class="fw-light mb-3">Kontak</h5>
                     <div class="d-flex justify-content-start align-items-start my-2 text-muted">
                         <span class="me-3">
                             <i class="fas fa-map-marked-alt"></i>
@@ -154,7 +151,7 @@
                 </div>
 
                 <div class="col-md-6 col-lg-3">
-                    <h5 class="fw-light mb-3">Follow Us</h5>
+                    <h5 class="fw-light mb-3">Ikuti kami</h5>
                     <div>
                         <ul class="list-unstyled d-flex">
                             <li>
@@ -164,17 +161,7 @@
                             </li>
                             <li>
                                 <a href="#" class="text-white text-decoration-none text-muted fs-4 me-4">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="text-white text-decoration-none text-muted fs-4 me-4">
                                     <i class="fab fa-instagram"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="text-white text-decoration-none text-muted fs-4 me-4">
-                                    <i class="fab fa-pinterest"></i>
                                 </a>
                             </li>
                         </ul>

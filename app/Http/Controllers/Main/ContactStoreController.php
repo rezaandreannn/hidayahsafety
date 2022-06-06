@@ -21,6 +21,6 @@ class ContactStoreController extends Controller
 
         Message::create($data);
 
-        return redirect()->back()->with('success', 'Thanks !');
+        return redirect()->back()->with('success', 'Terima kasih !');
     }
 }
