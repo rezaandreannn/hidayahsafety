@@ -12,15 +12,14 @@
 
             <div class="row g-0">
                 <div class="d-flex flex-wrap my-5 ">
-
-                    <ul class="nav">
+                    {{-- <ul class="nav">
                         @foreach ($categories as $category)
                             <li class="nav-item ">
                                 <a class="nav-link text-decoration-none text-muted"
                                     href="{{ route('category.show', $category->id) }}">{{ $category->name }}</a>
                             </li>
                         @endforeach
-                    </ul>
+                    </ul> --}}
                 </div>
 
                 @foreach ($produks as $produk)

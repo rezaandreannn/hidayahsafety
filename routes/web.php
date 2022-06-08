@@ -1,13 +1,15 @@
 <?php
 
-use App\Http\Controllers\Admin\MessagesController;
 use App\Http\Livewire\Category\Index;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Main\AboutController;
 use App\Http\Controllers\Main\ContactController;
 use App\Http\Controllers\Main\SpesialsContoller;
 use App\Http\Controllers\Admin\ProduksController;
+use App\Http\Controllers\main\CategoryController;
+use App\Http\Controllers\Admin\MessagesController;
 use App\Http\Controllers\Main\CollectionsContoller;
+use App\Http\Controllers\main\CategoryShowController;
 use App\Http\Controllers\Main\ContactStoreController;
 
 /*
@@ -28,8 +30,10 @@ use App\Http\Controllers\Main\ContactStoreController;
 // route guest
 Route::get('/', CollectionsContoller::class)->name('collection');
 Route::get('/spesial', SpesialsContoller::class)->name('spesial');
-Route::get('/category/{$id}', SpesialsContoller::class)->name('category.show');
+// Route::get('/category/{$id}', SpesialsContoller::class)->name('category.show');
 Route::get('/about', AboutController::class)->name('about');
+Route::get('/categories', CategoryController::class)->name('categories');
+Route::get('/categories/{id}', CategoryShowController::class)->name('categories.show');
 Route::get('/contact-me', ContactController::class)->name('contact');
 Route::post('/contact-me', ContactStoreController::class)->name('contact.store');
 

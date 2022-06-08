@@ -64,6 +64,9 @@
                     <li class="nav-item px-2 py-2">
                         <a class="nav-link text-uppercase text-dark" href="{{ route('contact') }}">kontak</a>
                     </li>
+                    <li class="nav-item px-2 py-2">
+                        <a class="nav-link text-uppercase text-dark" href="{{ route('categories') }}">Kategori</a>
+                    </li>
                 </ul>
             </div>
         </div>
