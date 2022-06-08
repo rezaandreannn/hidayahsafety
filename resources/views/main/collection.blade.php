@@ -37,25 +37,13 @@
                             @endif
                         </div>
                         <div class="text-center">
-                            {{-- <div class="rating mt-3">
-                                <span class="text-primary"><i class="fas fa-star"></i></span>
-                                <span class="text-primary"><i class="fas fa-star"></i></span>
-                                <span class="text-primary"><i class="fas fa-star"></i></span>
-                                <span class="text-primary"><i class="fas fa-star"></i></span>
-                                <span class="text-primary"><i class="fas fa-star"></i></span>
-                            </div> --}}
                             <p class="text-capitalize my-2">
                                 {{ $produk->produk }}
                                 <a href="http://" class="badge bg-primary border-0 text-decoration-none"
                                     data-bs-toggle="modal" data-bs-target="#exampleModal{{ $produk->id }}">detail</a>
                             </p>
-                            {{-- <p class="text-muted">Cat :
-                                {{ $produk->category->name }}</p>
-                            <p> --}}
-                            <a href="http://" class="badge bg-primary text-decoration-none fst-italic fw-light">call
-                                1</a>
-                            <a href="http://" class="badge bg-primary text-decoration-none fst-italic fw-light">call
-                                2</a>
+                            <x-call />
+
                             </p>
                             <span class="fw-bold">
                                 <div class="row">
@@ -110,12 +98,7 @@
                                         class="text-muted">{{ $produk->deskripsi }}</span>
                                 </p>
                                 <p>
-                                    <a href="http://"
-                                        class="badge bg-primary text-decoration-none fst-italic fw-light">call
-                                        1</a>
-                                    <a href="http://"
-                                        class="badge bg-primary text-decoration-none fst-italic fw-light">call
-                                        2</a>
+                                    <x-call />
                                 </p>
                             </div>
                         </div>

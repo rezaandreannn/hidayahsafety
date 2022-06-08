@@ -4,6 +4,6 @@
         Safety Nomex</a>
     {{-- menampilkan data user all --}}
 
-    <a class="btn btn-primary" target="black" href="https://api.whatsapp.com/send?phone=6282269710878">test</a>
+    <a class="btn btn-primary" target="black" href="https://api.whatsapp.com/send?phone=6283160071293">test</a>
 
 </x-app-layout>

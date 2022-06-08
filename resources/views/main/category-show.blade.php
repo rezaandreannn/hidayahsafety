@@ -29,10 +29,7 @@
                                     data-bs-toggle="modal" data-bs-target="#exampleModal{{ $items->id }}">detail</a>
                             </p>
                             <p>
-                                <a href="http://" class="badge bg-primary text-decoration-none fst-italic fw-light">call
-                                    1</a>
-                                <a href="http://" class="badge bg-primary text-decoration-none fst-italic fw-light">call
-                                    2</a>
+                                <x-call />
                             </p>
                         </div>
                     </div>
@@ -86,8 +83,7 @@
                                 <p><span class="fw-bold">Deskripsi</span> <br><span
                                         class="text-muted">{{ $items->deskripsi }}</span></p>
                                 <p>
-                                    <a href="http://" class="badge bg-primary text-decoration-none">call 1</a>
-                                    <a href="http://" class="badge bg-primary text-decoration-none">call 2</a>
+                                    <x-call />
                                 </p>
                             </div>
                         </div>

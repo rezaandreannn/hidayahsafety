@@ -25,10 +25,7 @@
                             </p>
                             {{-- <span class="d-block">Cat : {{ $items->category->name }}</span> --}}
                             <p>
-                                <a href="http://" class="badge bg-primary text-decoration-none fst-italic fw-light">call
-                                    1</a>
-                                <a href="http://" class="badge bg-primary text-decoration-none fst-italic fw-light">call
-                                    2</a>
+                                <x-call />
                             </p>
                         </div>
                     </div>
@@ -79,8 +76,7 @@
                                         class="text-muted">{{ $items->deskripsi }}</span></p>
                                 {{-- <p class="text-muted"></p> --}}
                                 <p>
-                                    <a href="http://" class="badge bg-primary text-decoration-none">call 1</a>
-                                    <a href="http://" class="badge bg-primary text-decoration-none">call 2</a>
+                                    <x-call />
                                 </p>
                             </div>
                         </div>

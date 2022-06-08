@@ -158,7 +158,8 @@
                     <div>
                         <ul class="list-unstyled d-flex">
                             <li>
-                                <a href="#" class="text-white text-decoration-none text-muted fs-4 me-4">
+                                <a href="https://www.facebook.com/HidayahSafetyIndonesia/?ref=pages_you_manage"
+                                    class="text-white text-decoration-none text-muted fs-4 me-4">
                                     <i class="fab fa-facebook-f"></i>
                                 </a>
                             </li>
