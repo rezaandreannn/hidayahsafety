@@ -7,20 +7,9 @@
             <div class="title text-center">
                 <h2 class="position-relative d-inline-block">Produk Kami</h2>
             </div>
-
-
-
             <div class="row g-0">
-                <div class="d-flex flex-wrap my-5 ">
-                    {{-- <ul class="nav">
-                        @foreach ($categories as $category)
-                            <li class="nav-item ">
-                                <a class="nav-link text-decoration-none text-muted"
-                                    href="{{ route('category.show', $category->id) }}">{{ $category->name }}</a>
-                            </li>
-                        @endforeach
-                    </ul> --}}
-                </div>
+                {{-- <div class="d-flex flex-wrap my-5 ">
+                </div> --}}
 
                 @foreach ($produks as $produk)
                     <div class="col-md-6 col-lg-4 col-xl-3 p-2 {{ $produk->category->name }}">

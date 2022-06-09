@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ config('app.name') }} | {{ $title }}</title>
-    {{-- favicon --}}
+    {{-- faicon --}}
     <link rel="icon" type="image/x-icon" href="{{ asset('assets/guest/images/logo.ico') }}">
     <!-- fontawesome cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -37,10 +37,13 @@
                 <button type="button" class="btn position-relative">
                     <i class="fa fa-heart"></i>
                     <span class="position-absolute top-0 start-100 translate-middle badge bg-primary">2</span>
-                </button>
-                <button type="button" class="btn position-relative">
+                </button> --}}
+                {{-- <button type="button" class="btn position-relative">
                     <i class="fa fa-search"></i>
                 </button> --}}
+                <a href="{{ route('login') }}" class="">
+                    <i class="fas fa-sign-in-alt text-dark"></i>
+                </a>
             </div>
 
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
