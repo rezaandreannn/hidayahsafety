@@ -10,10 +10,6 @@
             {{-- end pesan flashdata --}}
             <div class="x_panel">
                 <div class="x_title">
-                    </ul>
-                    {{-- tombol tambah produk --}}
-                    {{-- <a href="{{ route('produk.create') }} " class="btn btn-primary" style="float: right">Tambah</a> --}}
-                    {{-- end tombol tambah produk --}}
                     <div class="clearfix"></div>
                 </div>
                 <div class="x_content">

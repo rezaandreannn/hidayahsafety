@@ -25,14 +25,9 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
 // route guest
 Route::get('/', CollectionsContoller::class)->name('collection');
 Route::get('/spesial', SpesialsContoller::class)->name('spesial');
-// Route::get('/category/{$id}', SpesialsContoller::class)->name('category.show');
 Route::get('/about', AboutController::class)->name('about');
 Route::get('/categories', CategoryController::class)->name('categories');
 Route::get('/categories/{id}', CategoryShowController::class)->name('categories.show');
@@ -46,7 +41,6 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/message', [MessagesController::class, 'index'])->name('message.index');
     Route::resource('produk', ProduksController::class);
 });
-
 
 
 Route::get('/users', function () {
