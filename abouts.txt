@@ -1,4 +1,4 @@
-jumat /03/2022
+jumat /03/2022 = sukses
 redesign ui 
 -> collection
     -> call me
@@ -7,7 +7,7 @@ redesign ui
 -> spesial
 
 
-kamis/02/2022 👍
+kamis/02/2022 = sukses
 Admin{
 -> produk 
  -> edit produk = 
@@ -18,4 +18,8 @@ Admin{
  add deskripsi to produk
  messages = untuk menerima pesan dari users
 }
+
+next update = fitur pencarian produk
+                -> login users      
+                -> card users
 
