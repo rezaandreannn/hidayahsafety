@@ -17,8 +17,17 @@ class CollectionsContoller extends Controller
      */
     public function __invoke(Request $request)
     {
+        $cari = $request->search;
+        // dd($cari);
+        if ($cari) {
+            $produks = Produk::with('category')
+                ->where('produk', 'like', "%" . $cari . "%")->paginate(12);
+        } else {
+            $produks = Produk::with('category')->paginate(12);
+        }
+
         return view('main.collection', [
-            'produks' => Produk::all(),
+            'produks' => $produks,
             'categories' => Category::all()
         ]);
     }

@@ -6,12 +6,23 @@
         <div class="container">
             <div class="title text-center">
                 <h2 class="position-relative d-inline-block">Produk Kami</h2>
+                <div class="row d-flex justify-content-center">
+                    <div class="col-sm-12 col-md-6">
+                        <form action="" method="get">
+                            <div class="input-group mb-3 mt-2">
+                                <input type="text" class="form-control" name="search"
+                                    placeholder="Cari nama produk">
+                                <button class="btn bg-primary text-white border-0" type="submit">Cari</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
             <div class="row g-0">
                 {{-- <div class="d-flex flex-wrap my-5 ">
                 </div> --}}
 
-                @foreach ($produks as $produk)
+                @forelse ($produks as $produk)
                     <div class="col-md-6 col-lg-4 col-xl-3 p-2 {{ $produk->category->name }}">
                         <div class="collection-img position-relative">
                             <a href="http://">
@@ -42,7 +53,16 @@
                             </span>
                         </div>
                     </div>
-                @endforeach
+                @empty
+                    <h5 class="text-center">Data Tidak ada. </h5>
+                @endforelse
+                <div class="row d-flex ">
+
+                    <div class="col justify-content-center">
+                        {{ $produks->links() }}
+
+                    </div>
+                </div>
             </div>
         </div>
         {{-- </div> --}}
@@ -51,14 +71,13 @@
 
     <!-- Modal -->
     @foreach ($produks as $produk)
-        <div class="modal fade" id="exampleModal{{ $produk->id }}" tabindex="-1"
-            aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="exampleModal{{ $produk->id }}" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel">Detail : {{ $produk->produk }} </h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                            aria-label="Close"></button>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <div class="row">
